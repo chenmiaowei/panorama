@@ -34,3 +34,5 @@ panorama
 # Test images
 *.jpg
 *.png
+*.idea
+.DS_Store

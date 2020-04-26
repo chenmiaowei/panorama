@@ -70,3 +70,19 @@ That's it!
 # How to use panorama converter as a web service
 
 We're running this panorama converter on some of our servers and if you are interested in using it as a web service then please let me know: denis@denivip.ru
+
+## Usage
+```
+
+```
+
+## Docker Build
+```
+// Test
+docker run -t -i ubuntu
+docker run --memory 1024m --cpus 2  -it --entrypoint /bin/bash -v $PWD:/data -v $PWD/export:/export panorama:v0.0.1
+
+// Build
+docker build -t panorama:v0.0.1 .
+docker run -it -v $PWD:/data -v $PWD/export:/export panorama:v0.0.1 -i /data/image.jpg -o /export/cube_faces -r 256
+```
